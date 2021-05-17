@@ -12,4 +12,5 @@ git pull - use when an update has been made to remote repo and you do not have a
 git checkout - select which branch you working on.
 git add - use to add file to repo
 git -b branchname - creat new branch
-
+git log - see all previous commits with hash code
+get checkout # - paste hash code
