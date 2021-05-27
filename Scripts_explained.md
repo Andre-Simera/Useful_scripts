@@ -26,7 +26,18 @@
 ## Disparity Map
 
 - The *Disparity_map.py* script takes rectified image pairs as input and creates disparity maps/images from them.
+
 - The script is currenty set up to:
   - Output a disparity map based on the input image pair.
-  - Display the disparity map in a pop-up window which you can double click in to extract the disparity value at the clicked pixel co-ordinates. The disparity
-- It will convert the disparity value to a depth/distance value using a regression formual. **N.B The regression formula currently in the script is one created for the stereo camera system used in the tutorial I followed. Each stereo camera system will have a unique formula** 
+  
+  - Display the disparity map in a pop-up window which you can double click on to extract the disparity value at the clicked pixel co-ordinates. Once you double click the image the disparity value at the clicked co-ordinates is converted to a depth/distance value which is then displayed in the terminal.
+  
+    - The disparity to depth/distance conversion is done using a regression formual which can be viewed in the *coords_mouse_disp()* function in the script. **N.B The regression formula currently in the script is one created for the stereo camera system used in the tutorial I followed. Each stereo camera system will have a unique formula. However, the plan should be to utilise epipolar geometry techniques to do the disparity to depth/distance conversion and not regression.** 
+
+## Current Problems
+
+The disparity maps produced using the image pairs rectified using the Rectification.py script are not appearing as they should be i.e. some objects in these disparty maps that are near are being classified as far and some objects that are further away or classified as near.
+
+This problem does not, however, seem to occur when producing the disparity maps using the sample images that I found online that have already been rectified.
+
+Therefore, I suspect that there is something in the Calibration.py or Rectification.py script that I have set up incorrectly.
