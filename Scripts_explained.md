@@ -32,7 +32,9 @@
   
   - Display the disparity map in a pop-up window which you can double click on to extract the disparity value at the clicked pixel co-ordinates. Once you double click the image the disparity value at the clicked co-ordinates is converted to a depth/distance value which is then displayed in the terminal.
   
-    - The disparity to depth/distance conversion is done using a regression formual which can be viewed in the *coords_mouse_disp()* function in the script. **N.B The regression formula currently in the script is one created for the stereo camera system used in the tutorial I followed. Each stereo camera system will have a unique formula. However, the plan should be to utilise epipolar geometry techniques to do the disparity to depth/distance conversion and not regression.** 
+    - The disparity to depth/distance conversion is done using a regression formual which can be viewed in the *coords_mouse_disp()* function in the script. **N.B The regression formula currently in the script is one created for the stereo camera system used in the tutorial I followed. Each stereo camera system will have a unique formula.**
+      
+      **However, the plan should be to utilise epipolar geometry techniques to do the disparity to depth/distance conversion and not regression.** 
 
 ## Current Problems
 
